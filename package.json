@@ -1,0 +1,28 @@
+{
+  "name": "bestmovies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvmartinsdaSilva/BestMovies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvmartinsdaSilva/BestMovies/issues"
+  },
+  "homepage": "https://github.com/jvmartinsdaSilva/BestMovies#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
+  }
+}
