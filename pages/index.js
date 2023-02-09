@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react"
-
+import Header from '../components/Header/index'
 
 
 
 const Home = () => {
-    const [movies, setMovies] = useState()
+    const [datas, setDatas] = useState()
 
     useEffect(() => {
         const getMovies = async () => {
-            const res = await fetch('../api/movies')
-            const { AllMovies } = await res.json()
-            setMovies(AllMovies)
+            try{
+                const res = await fetch('../api/movies')
+                const { AllMovies } = await res.json()
+                setDatas(AllMovies)
+            } catch (err) {
+                console.log('ERRO: ' + err)
+            }
         }
         getMovies()
 
@@ -18,8 +22,7 @@ const Home = () => {
 
     return (
         <>
-            {console.log(movies)}
-            <h1>Olá</h1>
+            <Header datas={datas}/>
         </>
     )
 }

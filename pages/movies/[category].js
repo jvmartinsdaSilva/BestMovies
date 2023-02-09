@@ -1,7 +1,3 @@
-import { moviesData } from "../services/fakeDataBase"
-
-
-
 export async function getStaticPaths() {
     const res = await fetch('http://localhost:3000/api/movies')
     const datas = await res.json()
