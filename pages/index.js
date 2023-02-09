@@ -22,6 +22,7 @@ const Home = () => {
 
     return (
         <>
+        {console.log(datas)}
             <Header datas={datas}/>
         </>
     )
