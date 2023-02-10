@@ -24,7 +24,6 @@ const Home = () => {
     return (
         <>
             <Header datas={datas}/>
-            <Carrossel />
         </>
     )
 }
