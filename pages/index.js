@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Carrossel from "../components/carrossel"
 import Header from '../components/Header/index'
 
 
@@ -22,8 +23,8 @@ const Home = () => {
 
     return (
         <>
-        {console.log(datas)}
             <Header datas={datas}/>
+            <Carrossel />
         </>
     )
 }

@@ -5,9 +5,9 @@ const ResultContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({theme}) => theme.colors.text};
     padding: 1em;
-    border-bottom: 1px solid ${({theme}) => theme.colors.white};
+    border-bottom: 1px solid ${({theme}) => theme.colors.text};
     cursor: pointer;
 
 `

@@ -21,11 +21,14 @@ const SearchContainer = styled.div`
         justify-content: center;
         width: 90%;
         max-height: 300px;
-        background: ${({theme}) => theme.colors.backgroundTwo };
+        background: ${({theme}) => theme.colors.backgroundTwo};
+        z-index: 2;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         padding: .5em;
         overflow: auto;
+        color: white;
+        font-weight: bold;
     }
 
     .results > div:hover{
