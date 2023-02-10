@@ -34,7 +34,6 @@ const SearchComponent = ({ datas }) => {
 
     return (
         <SearchContainer>
-            {console.log(movies)}
             <input
                 type='text'
                 placeholder="Pesquisar por filme"
@@ -47,7 +46,7 @@ const SearchComponent = ({ datas }) => {
                             ? searchMovies.map((movie) => (
                                 <ResultComponent movieName={movie.title} />
                             ))
-                            : (<p>Nada foi encontrado</p>)
+                            : (<p>nothing was found</p>)
                     }
                 </div>
             )}
