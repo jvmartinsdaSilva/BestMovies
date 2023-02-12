@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Carrossel from "../components/carrossel"
+import ShowCase from "../components/ShowCase"
 import Header from '../components/Header/index'
 
 
@@ -24,6 +24,7 @@ const Home = () => {
     return (
         <>
             <Header datas={datas}/>
+            <ShowCase datas={datas}/>
         </>
     )
 }

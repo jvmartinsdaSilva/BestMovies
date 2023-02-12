@@ -7,6 +7,7 @@ const ResultContainer = styled.div`
     justify-content: space-between;
     color: ${({theme}) => theme.colors.text};
     padding: 1em;
+    width: 100%;
     border-bottom: 1px solid ${({theme}) => theme.colors.text};
     cursor: pointer;
 

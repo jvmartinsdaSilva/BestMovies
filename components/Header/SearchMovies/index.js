@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import SearchContainer from "./Style"
 import ResultComponent from "./SearchResults"
+import LoadComponent from "../../LoadComponet"
 
 
 const SearchComponent = ({ datas }) => {
@@ -11,7 +12,8 @@ const SearchComponent = ({ datas }) => {
 
     useEffect(() => {
         const allMovies = []
-        datas?.map(({ movies }) => allMovies.push(...movies))
+        if (datas) datas.map(({ movies }) => allMovies.push(...movies))
+
 
         // it is necessary to remove duplicate movies as the same movie can be present in different categories
         const removeDuplicates = allMovies.filter((movie) => {
@@ -41,10 +43,10 @@ const SearchComponent = ({ datas }) => {
             />
             {searchValue && (
                 <div className="results">
-                    {
+                    {!datas ? (<LoadComponent />) :
                         searchMovies.length > 0
                             ? searchMovies.map((movie) => (
-                                <ResultComponent movieName={movie.title} />
+                                <ResultComponent movieName={movie.title} key={movie.id} />
                             ))
                             : (<p>nothing was found</p>)
                     }

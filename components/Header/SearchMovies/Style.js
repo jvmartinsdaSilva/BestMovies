@@ -18,14 +18,13 @@ const SearchContainer = styled.div`
     .results{
         display: flex;
         flex-direction:column ;
-        justify-content: center;
-        margin-top:.5em;
+        align-items: center;
         width: 90%;
         max-height: 300px;
         background: ${({theme}) => theme.colors.backgroundTwo};
         z-index: 2;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         padding: 1em .5em;
         overflow: auto;
         color: white;
@@ -38,6 +37,10 @@ const SearchContainer = styled.div`
         padding: .5em;
         font-size: 22px;
         cursor: default;
+    }
+
+    .results::-webkit-scrollbar{
+        display: none;
     }
 
     .results > div:hover{
