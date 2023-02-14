@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import SearchContainer from "./Style"
 import ResultComponent from "./SearchResults"
-import LoadComponent from "../../LoadComponet"
+import LoadComponent from "../../LoadComponent"
 
 
 const SearchComponent = ({ datas }) => {

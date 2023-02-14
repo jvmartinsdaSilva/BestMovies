@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
-import LoadComponent from "../LoadComponet"
+import LoadComponent from "../LoadComponent"
 import InfosMovie from "./movieInfos"
-import ShowCaseContainer from "./Style"
+import FeaturedMovieContainer from "./Style"
 
-const ShowCase = ({ datas }) => {
+const FeaturedMovie = ({ datas }) => {
     const [movie, setMovie] = useState({})
 
     useEffect(() => {
         if (datas) {
-            const movieCategory = datas?.filter((movie) => movie.category === 'bestmovies')
+            const movieCategory = datas.filter((movie) => movie.category === 'bestmovies')
             const [moviesInfos] = movieCategory
             const { movies } = moviesInfos
             getMovie(movies)
@@ -23,7 +23,7 @@ const ShowCase = ({ datas }) => {
     }
 
     return (
-        <ShowCaseContainer>
+        <FeaturedMovieContainer>
             {datas
                 ? <InfosMovie
                  title={movie.title}
@@ -32,8 +32,8 @@ const ShowCase = ({ datas }) => {
                   />
                 : <LoadComponent />
             }
-        </ShowCaseContainer>
+        </FeaturedMovieContainer>
     )
 }
 
-export default ShowCase
+export default FeaturedMovie

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
-import ShowCase from "../components/ShowCase"
 import Header from '../components/Header/index'
-
-
+import FeaturedMovie from "../components/featuredMovie"
+import MoviesLists from "../components/MoviesLists"
 
 const Home = () => {
     const [datas, setDatas] = useState()
@@ -24,7 +23,8 @@ const Home = () => {
     return (
         <>
             <Header datas={datas}/>
-            <ShowCase datas={datas}/>
+            <FeaturedMovie datas={datas}/>
+            <MoviesLists datas={datas}/>
         </>
     )
 }

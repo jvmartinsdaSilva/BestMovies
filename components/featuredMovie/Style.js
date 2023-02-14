@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ShowCaseContainer = styled.div`
+const FeaturedMovieContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,4 +12,4 @@ const ShowCaseContainer = styled.div`
     }
 `
 
-export default ShowCaseContainer
+export default FeaturedMovieContainer
