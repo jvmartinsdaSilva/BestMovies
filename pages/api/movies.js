@@ -10,7 +10,7 @@ const getMoviesByCategory = async (categoryID) => {
 
     } catch (err) {
         console.log('ERRO: ' + err)
-        return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
+        // return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
     }
 
 }
@@ -26,7 +26,8 @@ const getBestMovies = async () => {
 
     } catch (err) {
         console.log('ERRO: ' + err)
-        return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
+        return false
+        // return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
     }
 
 }
@@ -34,17 +35,18 @@ const getBestMovies = async () => {
 
 const movies = async (req, res) => {
 
-    const bestMovies = await getBestMovies()
-    const moviesAction = await getMoviesByCategory(28)
-    const moviesAdventure = await getMoviesByCategory(12)
-    const moviesComedy = await getMoviesByCategory(35)
-    const moviesHorror = await getMoviesByCategory(27)
-    const moviesMistery = await getMoviesByCategory(9648)
+    const bestMovies = await getBestMovies() || []
+    const moviesAction = await getMoviesByCategory(28) || []
+    const moviesAdventure = await getMoviesByCategory(12) || []
+    const moviesComedy = await getMoviesByCategory(35) || []
+    const moviesHorror = await getMoviesByCategory(27) || []
+    const moviesMistery = await getMoviesByCategory(9648) || []
 
     res.json({
         AllMovies: [
+            
             {
-                category: 'bestmovies',
+                category: 'bestmovies' ,
                 movies: bestMovies
             },
             {

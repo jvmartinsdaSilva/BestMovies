@@ -1,16 +1,19 @@
 import HeaderContainer from "./Style"
 import SearchComponent from "./SearchMovies"
+import Link from "next/link"
 
 
-const Header = ({datas}) => {
-    
+const Header = ({ datas }) => {
+
     return (
-        <HeaderContainer>           
-            <h1>
-                BEST <br />
-                MOVIES
-            </h1>
-            <SearchComponent datas={datas}/>
+        <HeaderContainer>
+            <Link href='/'>
+                <h1>
+                    BEST <br />
+                    MOVIES
+                </h1>
+            </Link>
+            <SearchComponent datas={datas} />
         </HeaderContainer>
 
     )

@@ -36,6 +36,7 @@ const SearchComponent = ({ datas }) => {
 
     return (
         <SearchContainer>
+            
             <input
                 type='text'
                 placeholder="Pesquisar por filme"
@@ -43,7 +44,7 @@ const SearchComponent = ({ datas }) => {
             />
             {searchValue && (
                 <div className="results">
-                    {!datas ? (<LoadComponent />) :
+                    {movies.length === 0 ? (<LoadComponent />) :
                         searchMovies.length > 0
                             ? searchMovies.map((movie) => (
                                 <ResultComponent movieName={movie.title} key={movie.id} />

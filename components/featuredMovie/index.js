@@ -24,7 +24,7 @@ const FeaturedMovie = ({ datas }) => {
 
     return (
         <FeaturedMovieContainer>
-            {datas
+            {movie
                 ? <InfosMovie
                  title={movie.title}
                  description={movie.overview}

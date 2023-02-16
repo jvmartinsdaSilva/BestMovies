@@ -30,37 +30,48 @@ const ListCategoryContainer = styled.div`
     
     ul::-webkit-scrollbar-thumb{
         margin: 1em;
-        background: ${({theme}) => theme.colors.white};
+        background: ${({ theme }) => theme.colors.white};
         padding: 1em;
         width: 5px;
         height: 5px;
         border-radius: 10px;
     }
-
-    li{
+    
+    li.moreMovies{
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 2em;
-        min-width: 120px;
-        max-width: 120px;
-        height: 300px;
+        justify-content: center;
+        padding: .5em;
+
     }
 
-    h3{
-        font-size: 14px;
-    }
-
-    button{
-        margin: 1em 0;      
-        padding: .5em 1em;
-        border: none;
-        background: ${({theme}) => theme.colors.secundary};
-        color: ${({theme}) => theme.colors.text};
+    li.moreMovies button{
+        display: flex;
+        text-align: start;
+        align-items: center;
+        margin: 1em 0;
+        padding: .5em;
+        height: 70%;
+        font-size: 22px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        color: ${({ theme }) => theme.colors.text};
+        transition: .3s;
         cursor: pointer;
     }
 
-    
+    li.moreMovies button:hover{
+        color: ${({ theme }) => theme.colors.secundary};
+    }
+
+    li.moreMovies a{
+        text-decoration: none;
+    }
+
+
+
 `
 
 export default ListCategoryContainer

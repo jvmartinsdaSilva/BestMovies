@@ -1,8 +1,12 @@
+import { useState, useEffect } from "react"
+
+import MovicesCategory from "../../components/MoviesCategory"
+
+
 export async function getStaticPaths() {
     const res = await fetch('https://best-movies-it7o7449g-jvmartinsdasilva.vercel.app/api/movies')
     const datas = await res.json()
     const { AllMovies } = datas
-    // const AllMovies = moviesData
 
     const paths = AllMovies.map((movie) => {
         return {
@@ -11,12 +15,11 @@ export async function getStaticPaths() {
             }
         }
     })
-
+    
     return {
         paths: paths,
         fallback: false
     }
-
 }
 
 
@@ -30,12 +33,25 @@ export async function getStaticProps(context) {
     }
 }
 
-function movies(props) {
-    return (
-        <>
+function movies({category}) {
+    const [datas, setDatas] = useState()
 
-            <h1>Categoria do filme: {props.category}</h1>
-        </>
+    useEffect(() => {
+        const getMovies = async () => {
+            try{
+                const res = await fetch('../api/movies')
+                const { AllMovies } = await res.json()
+                setDatas(AllMovies)
+            } catch (err) {
+                console.log('ERRO: ' + err)
+            }
+        }
+        getMovies()
+    }, [])
+
+    return (
+        <MovicesCategory category={category} datas={datas}/>
+
     )
 }
 

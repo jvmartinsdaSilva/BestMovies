@@ -11,6 +11,10 @@ const HeaderContainer = styled.header`
     padding:.5em;
     background: ${({theme}) => theme.colors.backgroundOne};
     max-height: 150px;
+    
+    a{
+        text-decoration: none;
+    }
 
     h1{
         margin:.5em 0;

@@ -39,7 +39,6 @@ const InfosContainer = styled.div`
         font-size: 13px;
         font-weight: bold;
         opacity: 0.8;
-
     }
 
     button{
@@ -53,6 +52,11 @@ const InfosContainer = styled.div`
         font-weight: bold;
         border: none;
         cursor: pointer;
+        transition: .5s;
+    }
+
+    button:hover{
+        background: ${({theme}) => theme.colors.secundary};
     }
 
     @media screen and (min-width: 768px) {
