@@ -47,7 +47,11 @@ const SearchComponent = ({ datas }) => {
                     {movies.length === 0 ? (<LoadComponent />) :
                         searchMovies.length > 0
                             ? searchMovies.map((movie) => (
-                                <ResultComponent movieName={movie.title} key={movie.id} />
+                                <ResultComponent
+                                movieName={movie.title}
+                                key={movie.id} 
+                                img={movie.poster_path}
+                                />
                             ))
                             : (<p>nothing was found</p>)
                     }

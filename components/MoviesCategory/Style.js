@@ -4,15 +4,14 @@ import styled from "styled-components";
 const MoviesCategoryContainer = styled.div`
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     color: ${({theme}) => theme.colors.text};
     width: 100%;
     margin: 2em 0;
 
     h2{
-        font-size: 20px;
-        text-transform: capitalize;
+        font-size: 40px;
+        text-transform: uppercase;
     }
 
     ul{
@@ -25,7 +24,7 @@ const MoviesCategoryContainer = styled.div`
     }
 
     ul > li{
-        margin: 3em;
+        margin: 1em;
     }
 
     @media screen and (min-width: 768px){

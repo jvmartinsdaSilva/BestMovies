@@ -12,6 +12,11 @@ const GlobalStyle  = createGlobalStyle`
         font-family: Sans-Serif;
         background: #151612;
     }
+
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    
 `
 
 export default GlobalStyle

@@ -56,7 +56,8 @@ const ListCategoryContainer = styled.div`
         z-index: 10;
         border: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
-        border-radius: 10px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
         color: ${({ theme }) => theme.colors.text};
         transition: .3s;
         cursor: pointer;
