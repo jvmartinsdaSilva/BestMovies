@@ -13,7 +13,7 @@ const ResultContainer = styled.div`
 
     h2{
         margin: 0 2em;
-        font-size: 30px;
+        font-size: 16px;
     }
 
     img{
@@ -22,6 +22,11 @@ const ResultContainer = styled.div`
     }
 
 
+    @media screen and (min-width: 768px){
+        h2{
+            font-size: 30px;
+        }
+    }
 
 `
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Header from '../components/Header/index'
 import FeaturedMovie from "../components/featuredMovie"
 import MoviesLists from "../components/MoviesLists"
+import Footer from "../components/footer"
 
 const Home = () => {
     const [datas, setDatas] = useState()
@@ -25,6 +26,7 @@ const Home = () => {
             <Header datas={datas}/>
             <FeaturedMovie datas={datas}/>
             <MoviesLists datas={datas}/>
+            <Footer />
         </>
     )
 }

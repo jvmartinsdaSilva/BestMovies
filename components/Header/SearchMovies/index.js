@@ -14,7 +14,6 @@ const SearchComponent = ({ datas }) => {
         const allMovies = []
         if (datas) datas.map(({ movies }) => allMovies.push(...movies))
 
-
         // it is necessary to remove duplicate movies as the same movie can be present in different categories
         const removeDuplicates = allMovies.filter((movie) => {
             const duplicates = getMovies.has(movie.title)
