@@ -10,7 +10,7 @@ const GlobalStyle  = createGlobalStyle`
     body{
         font-size: 14px;
         font-family: Sans-Serif;
-        background: #151612;
+        background: ${({theme}) => theme.colors.backgroundOne};
     }
 
     body::-webkit-scrollbar{

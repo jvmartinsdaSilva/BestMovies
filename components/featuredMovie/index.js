@@ -26,10 +26,11 @@ const FeaturedMovie = ({ datas }) => {
         <FeaturedMovieContainer>
             {movie
                 ? <InfosMovie
-                 title={movie.title}
-                 description={movie.overview}
-                 image={movie.backdrop_path}
-                  />
+                    title={movie.title}
+                    description={movie.overview}
+                    image={movie.backdrop_path}
+                    Id={movie.id}
+                />
                 : <LoadComponent />
             }
         </FeaturedMovieContainer>

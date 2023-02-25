@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import ResultContainer from "./SearchResults/Style"
 
 const SearchContainer = styled.div`
     display: flex;
@@ -14,13 +15,11 @@ const SearchContainer = styled.div`
         background: ${({theme}) => theme.colors.white};
     }
 
-
     .results{
         display: flex;
         flex-direction:column ;
-        align-items: center;
         width: 90%;
-        max-height: 300px;
+        max-height: 310px;
         background: ${({theme}) => theme.colors.backgroundTwo};
         z-index: 2;
         border-bottom-left-radius: 20px;
@@ -43,10 +42,9 @@ const SearchContainer = styled.div`
         display: none;
     }
 
-    .results > div:hover{
+    ${ResultContainer}:hover{
         background: ${({theme}) => theme.colors.backgroundTwoHover};
     }
-
 `
 
 export default SearchContainer

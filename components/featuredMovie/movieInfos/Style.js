@@ -59,6 +59,10 @@ const InfosContainer = styled.div`
         background: ${({theme}) => theme.colors.secundary};
     }
 
+    a{
+        text-decoration: none;
+    }
+
     @media screen and (min-width: 768px) {
 
         h2{

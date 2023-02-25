@@ -7,5 +7,6 @@ export  default  {
         backgroundTwoHover: "#303030",
         white: '#EFE9E7',
         text: '#EFE9E7',
+        text2: '#efe9e7a5'
     }
 }

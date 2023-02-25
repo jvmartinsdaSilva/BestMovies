@@ -1,4 +1,5 @@
 import MovieCardContainer from "./Style"
+import Link from "next/link"
 
 
 const MovieCard = ({ movieInfos }) => {
@@ -6,7 +7,7 @@ const MovieCard = ({ movieInfos }) => {
         <MovieCardContainer>
             <img src={`https://image.tmdb.org/t/p/w300/${movieInfos.poster_path}`} alt='Movie post' />
             <h3>{movieInfos.title}</h3>
-            <button>MORE INFOS</button>
+            <Link href={`/movie/${movieInfos.id.toString()}`}><button>MORE INFOS</button></Link>
         </MovieCardContainer>
     )
 }

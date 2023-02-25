@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+
 import Header from '../components/Header/index'
 import FeaturedMovie from "../components/featuredMovie"
 import MoviesLists from "../components/MoviesLists"
@@ -13,6 +14,7 @@ const Home = () => {
                 const res = await fetch('../api/movies')
                 const { AllMovies } = await res.json()
                 setDatas(AllMovies)
+
             } catch (err) {
                 console.log('ERRO: ' + err)
             }
@@ -23,9 +25,9 @@ const Home = () => {
 
     return (
         <>
-            <Header datas={datas}/>
-            <FeaturedMovie datas={datas}/>
-            <MoviesLists datas={datas}/>
+            <Header datas={datas} />
+            <FeaturedMovie datas={datas} />
+            <MoviesLists datas={datas} />
             <Footer />
         </>
     )

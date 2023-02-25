@@ -8,7 +8,9 @@ const LoadContainer = styled.div`
     border-left:none ;
     border-top: none;  
     border-radius: 50%;
+    margin: 1em auto;
     animation: spiner .5s linear infinite;
+    
 
     @keyframes spiner {
         to{

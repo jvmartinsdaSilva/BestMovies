@@ -15,7 +15,7 @@ export async function getStaticPaths() {
             }
         }
     })
-    
+
     return {
         paths: paths,
         fallback: false
@@ -33,12 +33,12 @@ export async function getStaticProps(context) {
     }
 }
 
-function movies({category}) {
+function movies({ category }) {
     const [datas, setDatas] = useState()
 
     useEffect(() => {
         const getMovies = async () => {
-            try{
+            try {
                 const res = await fetch('../api/movies')
                 const { AllMovies } = await res.json()
                 setDatas(AllMovies)
@@ -49,10 +49,7 @@ function movies({category}) {
         getMovies()
     }, [])
 
-    return (
-        <MovicesCategory category={category} datas={datas}/>
-
-    )
+    return <MovicesCategory category={category} datas={datas} />
 }
 
 export default movies

@@ -35,7 +35,6 @@ const SearchComponent = ({ datas }) => {
 
     return (
         <SearchContainer>
-            
             <input
                 type='text'
                 placeholder="Pesquisar por filme"
@@ -50,6 +49,7 @@ const SearchComponent = ({ datas }) => {
                                 movieName={movie.title}
                                 key={movie.id} 
                                 img={movie.poster_path}
+                                movieId={movie.id}
                                 />
                             ))
                             : (<p>nothing was found</p>)

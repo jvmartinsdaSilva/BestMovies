@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const ResultContainer = styled.div`
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,6 +11,7 @@ const ResultContainer = styled.div`
     max-height: 110px;
     border-bottom: 1px solid ${({theme}) => theme.colors.text};
     cursor: pointer;
+
 
     h2{
         margin: 0 2em;
