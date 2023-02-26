@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import Footer from "../../components/footer"
 
 import MovieInfos from "../../components/MovieInfos"
 
@@ -66,8 +65,8 @@ const Movie = ({ id }) => {
                 const movies = removeDuplicates(datas)
 
                 const movie = movies.filter((movie) => movie.id.toString() === id)
-                setMovieID(...movie)          
-                
+                setMovieID(...movie)
+
             } catch (err) {
                 console.log('ERRO: ' + err)
             }
@@ -75,14 +74,7 @@ const Movie = ({ id }) => {
         getMovies()
     }, [])
 
-
-    return (
-        <>
-            <MovieInfos infos={movieID} />
-            <Footer />
-        </>
-    )
-
+    return <MovieInfos infos={movieID} />
 }
 
 export default Movie
