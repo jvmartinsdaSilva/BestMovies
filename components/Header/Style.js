@@ -27,9 +27,7 @@ const HeaderContainer = styled.header`
             ${({theme}) => theme.colors.secundary}
         );
         background-clip: text;
-        -webkit-background-clip: text;
-        
-        
+        -webkit-background-clip: text;     
     }
 `
 

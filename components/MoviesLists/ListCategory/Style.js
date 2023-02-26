@@ -51,7 +51,7 @@ const ListCategoryContainer = styled.div`
         margin: 1em 0;
         padding: .5em;
         height: 70%;
-        font-size: 22px;
+        font-size: 20px;
         background: rgba(255, 255, 255, 0.1);
         z-index: 10;
         border: 1px solid rgba(255, 255, 255, 0.1);

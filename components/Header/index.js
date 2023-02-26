@@ -8,7 +8,7 @@ const Header = ({ datas }) => {
     return (
         <HeaderContainer>
             <Link href='/'>
-                <h1>
+                <h1 translate="no">
                     BEST <br />
                     MOVIES
                 </h1>

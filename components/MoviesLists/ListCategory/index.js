@@ -25,7 +25,7 @@ const ListCategory = ({ movieInfos }) => {
                 <li className="moreMovies">
                     <Link href={`/movies/${movieInfos.category}`}>
                         <button>
-                        More <br/> 
+                        More  <br/> 
                         Movies
                         </button>
                     </Link>

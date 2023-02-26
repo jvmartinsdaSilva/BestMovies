@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Footer from "../../components/Footer"
 
 import MovicesCategory from "../../components/MoviesCategory"
 
@@ -49,7 +50,12 @@ function movies({ category }) {
         getMovies()
     }, [])
 
-    return <MovicesCategory category={category} datas={datas} />
+    return (
+        <>
+            <MovicesCategory category={category} datas={datas} />
+            <Footer />
+        </>
+    )
 }
 
 export default movies

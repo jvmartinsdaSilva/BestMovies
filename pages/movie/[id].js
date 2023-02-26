@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Footer from "../../components/Footer"
 import Header from "../../components/Header"
 
 import MovieInfos from "../../components/MovieInfos"
@@ -52,7 +53,6 @@ export async function getStaticProps(context) {
 }
 
 const Movie = ({ id }) => {
-    const [allMovies, setAllMovies] = useState()
     const [movieID, setMovieID] = useState()
 
     useEffect(() => {
@@ -62,7 +62,6 @@ const Movie = ({ id }) => {
             try {
                 const res = await fetch('../api/movies')
                 const { AllMovies } = await res.json()
-                setAllMovies(AllMovies)
 
                 if (AllMovies) AllMovies?.map(({ movies }) => datas.push(...movies))
 
@@ -82,6 +81,7 @@ const Movie = ({ id }) => {
     return (
         <>
             <MovieInfos infos={movieID} />
+            <Footer />
         </>
     )
 
