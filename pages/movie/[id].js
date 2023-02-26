@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react"
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
+import Footer from "../../components/footer"
 
 import MovieInfos from "../../components/MovieInfos"
-
 
 // it is necessary to remove duplicate movies as the same movie can be present in different categories
 const removeDuplicates = (Allmovies) => {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Footer from "../../components/Footer"
+import Footer from "../../components/footer"
 
 import MovicesCategory from "../../components/MoviesCategory"
 

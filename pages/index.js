@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import Header from '../components/Header/index'
 import FeaturedMovie from "../components/featuredMovie"
 import MoviesLists from "../components/MoviesLists"
-import Footer from "../components/Footer"
+import Footer from "../components/footer"
 
 const Home = () => {
     const [datas, setDatas] = useState()
