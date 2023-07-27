@@ -6,11 +6,13 @@ import MovicesCategory from "../../components/MoviesCategory"
 
 export async function getStaticPaths() {
     const res = await fetch('https://best-movies-it7o7449g-jvmartinsdasilva.vercel.app/api/movies')
+    // const res = await fetch("http://localhost:3000/api/movies")
     const datas = await res.json()
     const { AllMovies } = datas
+    console.log(datas)
 
     const paths = AllMovies.map((movie) => {
-        return {
+        return { 
             params: {
                 category: movie.category.toString()
             }

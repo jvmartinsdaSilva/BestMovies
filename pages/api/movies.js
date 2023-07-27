@@ -5,12 +5,11 @@ const getMoviesByCategory = async (categoryID) => {
 
         const getMovies = await fetch(categoryURL)
         const { results: movies } = await getMovies.json()
-
+        
         return movies
 
     } catch (err) {
-        console.log('ERRO: ' + err)
-        // return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
+        return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
     }
 
 }
@@ -26,8 +25,8 @@ const getBestMovies = async () => {
 
     } catch (err) {
         console.log('ERRO: ' + err)
-        return false
-        // return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
+        return { msg: 'Descupe, tivemos problemas ao conectar ao nosso servidor!' }
+        // return false
     }
 
 }

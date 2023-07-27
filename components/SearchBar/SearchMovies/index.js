@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import SearchContainer from "./Style"
-import ResultComponent from "./SearchResults"
+import ResultComponent from "../SearchResults"
 import LoadComponent from "../../LoadComponent"
 
 

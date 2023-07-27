@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import MovieInfosContainer from "./Style"
 import LoadComponent from "../LoadComponent"
+import Footer from "../footer"
 
 
 const MovieInfos = ({ infos }) => {
@@ -30,8 +31,9 @@ const MovieInfos = ({ infos }) => {
                     <h3>Release Date: {movie.release_date}</h3>
                     <h3>Avaliation: {movie.vote_average}</h3>
                     <p>{movie.overview}</p>
-                    {console.log(movie)}
+                    <Footer />
                 </MovieInfosContainer>
+
             ) : <LoadComponent />}
         </>
     )

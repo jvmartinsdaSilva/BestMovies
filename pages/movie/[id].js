@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 import MovieInfos from "../../components/MovieInfos"
+import Footer from "../../components/footer"
 
 // it is necessary to remove duplicate movies as the same movie can be present in different categories
 const removeDuplicates = (Allmovies) => {
@@ -68,13 +69,17 @@ const Movie = ({ id }) => {
                 setMovieID(...movie)
 
             } catch (err) {
-                console.log('ERRO: ' + err)
+                return err
             }
         }
         getMovies()
     }, [])
 
-    return <MovieInfos infos={movieID} />
+    return (
+        <>
+            <MovieInfos infos={movieID} />
+        </>
+    )
 }
 
 export default Movie

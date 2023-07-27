@@ -14,15 +14,14 @@ const Home = () => {
                 const res = await fetch('../api/movies')
                 const { AllMovies } = await res.json()
                 setDatas(AllMovies)
-
             } catch (err) {
-                console.log('ERRO: ' + err)
+                return ("ERRO", + err)
             }
         }
         getMovies()
-
+        
     }, [])
-
+    
     return (
         <>
             <Header datas={datas} />

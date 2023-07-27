@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 const MoviesLists = ({datas}) => {
-    const [movies, setMovies] = useState([])
+    const [movies, setMovies] = useState()
 
     useEffect(() => {
         if(datas){
@@ -16,7 +16,7 @@ const MoviesLists = ({datas}) => {
 
     return (
         <MoviesListsContainer>
-            {movies && movies.map((movie) => (
+            {movies?.map((movie) => (
                 <ListCategory
                  movieInfos={movie}
                  key={movie.category}/>

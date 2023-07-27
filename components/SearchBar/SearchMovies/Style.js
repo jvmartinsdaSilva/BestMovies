@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import ResultContainer from "./SearchResults/Style"
+import ResultContainer from "../SearchResults/Style"
 
 const SearchContainer = styled.div`
     display: flex;

@@ -1,5 +1,5 @@
 import HeaderContainer from "./Style"
-import SearchComponent from "./SearchMovies"
+import SearchComponent from "../SearchBar/SearchMovies"
 import Link from "next/link"
 
 
