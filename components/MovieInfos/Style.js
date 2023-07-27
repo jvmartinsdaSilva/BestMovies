@@ -64,22 +64,11 @@ const MovieInfosContainer = styled.div`
             font-size: 30px;
         }
 
-        h2, p{
+        h2{
             margin: 1em;
         }
 
-        p{
-            text-align: start;
-            font-size: 22px;         
-        }
 
-        h3{
-            margin-left: 1.5em;
-        }
-
-        h3 > span{
-            color: red  !important;
-        }
     }
 
 `
