@@ -11,7 +11,7 @@ const MovicesCategory = ({ category, datas }) => {
 
     useEffect(() => {
         if (datas) {
-            const [moviesCategory] = datas.filter((movie) => movie.category === category)
+            const [moviesCategory] = datas.filter(movie => movie.category === category)
             const { movies } = moviesCategory
             setMovies(movies)
         }

@@ -1,6 +1,6 @@
 const getMoviesByCategory = async (categoryID) => {
     try {
-        const apiKey = process.env.APY_KEY
+        const apiKey = process.env.API_KEY
         const categoryURL = `https://api.themoviedb.org/3/discover/movie?with_genres=${categoryID}&api_key=${apiKey}`
 
         const getMovies = await fetch(categoryURL)
@@ -16,7 +16,7 @@ const getMoviesByCategory = async (categoryID) => {
 
 const getBestMovies = async () => {
     try {
-        const apiKey = process.env.APY_KEY
+        const apiKey = process.env.API_KEY
 
         const getMovies = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
         const { results: movies } = await getMovies.json()
