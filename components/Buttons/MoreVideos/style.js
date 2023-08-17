@@ -42,6 +42,8 @@ export const Button = styled.button`
             left: 0;
             transform: translateX(-101%);
             z-index: -1;
+            transition: .5s;
+
         }
 
         &::before{
@@ -59,6 +61,8 @@ export const Button = styled.button`
             right: 0;
             transform: translateX(101%);
             z-index: -1;
+            transition: .5s;
+
         }
 
 
@@ -71,4 +75,5 @@ export const Button = styled.button`
             transform: translateX(0);
             transition: .5s;
         }
+
 `
