@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+
 import ListCategoryContainer from "./Style";
 import MovieCard from "../../MovieCard";
 import Link from "next/link";
+import { ButtonMoereVideos } from "../../Buttons/MoreVideos";
 
 const ListCategory = ({ movieInfos }) => {
     const [movies, setMovies] = useState([])
@@ -21,15 +23,7 @@ const ListCategory = ({ movieInfos }) => {
                 {movies.map((movie) => (
                     <MovieCard key={movie.id} movieInfos={movie} />
                 ))}
-
-                <li className="moreMovies">
-                    <Link href={`/movies/${movieInfos.category}`}>
-                        <button>
-                        More  <br/> 
-                        Movies
-                        </button>
-                    </Link>
-                </li>
+                <ButtonMoereVideos goTo={`/movies/${movieInfos.category}`} />
             </ul>
         </ListCategoryContainer>
     )
