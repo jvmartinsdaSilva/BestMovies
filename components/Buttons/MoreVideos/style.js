@@ -23,9 +23,9 @@ export const Button = styled.button`
         overflow: hidden;
         position: relative;
         border-radius: 0 20px;
+        color: white;
 
         a{
-            color: white;
             text-decoration: none;
         }
 
@@ -36,7 +36,10 @@ export const Button = styled.button`
             justify-items: center;
             width: 100%;
             height: 50%;
-            background: ${props => props.theme.colors.secundary};
+            background: linear-gradient(
+                to bottom, 
+                ${props => props.theme.colors.secundary}, 
+                ${props => props.theme.colors.secundary_bold});
             position: absolute;
             top: 0;
             left: 0;
@@ -53,7 +56,10 @@ export const Button = styled.button`
             justify-items: center;
             width: 100%;
             height: 50%;
-            background: ${props => props.theme.colors.secundary};
+            background: linear-gradient(
+                to top, 
+                ${props => props.theme.colors.secundary}, 
+                ${props => props.theme.colors.secundary_bold});
             position: absolute;
             /* top: 100; */
             /* left: 0; */

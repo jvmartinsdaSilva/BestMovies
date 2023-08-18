@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-const MoviesListsContainer = styled.div`
+const MoviesListsContainer = styled.main`
     display: flex;
     flex-direction: column;
     margin: 1em;

@@ -40,6 +40,7 @@ const movies = async (req, res) => {
     const moviesComedy = await getMoviesByCategory(35) || []
     const moviesHorror = await getMoviesByCategory(27) || []
     const moviesMistery = await getMoviesByCategory(9648) || []
+    
 
     res.json({
         AllMovies: [

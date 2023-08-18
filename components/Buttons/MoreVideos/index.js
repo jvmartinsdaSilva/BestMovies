@@ -6,12 +6,12 @@ import * as S from "./style"
 export const ButtonMoereVideos = ({ goTo }) => {
     return (
         <S.Container>
-            <S.Button>
-                    <Link href={goTo}>
-                        More <br />
-                        Movies
-                    </Link>
-            </S.Button>
+            <Link href={goTo}>
+                <S.Button>
+                    More <br />
+                    Movies
+                </S.Button>
+            </Link>
         </S.Container>
     )
 }
