@@ -7,13 +7,13 @@ const SearchContainer = styled.div`
     align-items: center;
     width: 100%;
     
-    input{
-        width: 90%;
-        height: 40px;
-        border: none;
-        padding: .5em;
-        background: ${({theme}) => theme.colors.white};
+    span{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
+
 
     .results{
         display: flex;

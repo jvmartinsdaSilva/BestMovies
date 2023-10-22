@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import SearchContainer from "./Style"
 import ResultComponent from "../SearchResults"
 import LoadComponent from "../../LoadComponent"
+import { ButtonCloseSearch } from "../../Buttons/CloseSearchBar"
+import { InpuSearch } from "../../Inputs/SearchInput"
 
 
 const SearchComponent = ({ datas }) => {
@@ -35,11 +37,10 @@ const SearchComponent = ({ datas }) => {
 
     return (
         <SearchContainer>
-            <input
-                type='text'
-                placeholder="Pesquisar por filme"
-                onChange={e => setSearchValue(e.target.value)}
-            />
+            <span>
+                <InpuSearch handleChange={e => setSearchValue(e)} /> 
+                <ButtonCloseSearch handleClick={() => setSearchValue("")}/>
+            </span>
             {searchValue && (
                 <div className="results">
                     {movies.length === 0 ? (<LoadComponent />) :
