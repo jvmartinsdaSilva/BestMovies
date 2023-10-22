@@ -38,7 +38,7 @@ const SearchComponent = ({ datas }) => {
     return (
         <SearchContainer>
             <span>
-                <InpuSearch handleChange={e => setSearchValue(e)} /> 
+                <InpuSearch handleChange={e => setSearchValue(e)} value={searchValue}/> 
                 <ButtonCloseSearch handleClick={() => setSearchValue("")}/>
             </span>
             {searchValue && (
